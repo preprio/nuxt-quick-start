@@ -9,7 +9,7 @@ Copy the .env.example file in this directory to .env (which will be ignored by G
 
 cp .env.example .env.
 
-Update the .env and replace <YOUR-ACCESS-TOKEN> with the Prepr access token from your environment with demo content.
+Update the .env and replace `<YOUR-ACCESS-TOKEN>` with the Prepr access token from your environment with demo content.
 
 ### npm
 npm install
