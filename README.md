@@ -1,7 +1,9 @@
-# nuxt-quick-start
-The Nuxt quick start project launches a blog app with content from Prepr.
+# Nuxt 3 Minimal Starter
+
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
+
 Make sure to install the dependencies:
 
 ```bash
@@ -12,22 +14,12 @@ yarn install
 npm install
 
 # pnpm
-pnpm install --shamefully-hoist
+pnpm install
 ```
-
-### Add the environment file
-Copy the .env.example file in this directory to .env (which will be ignored by Git) by running the following command:
-
-```bash
-cp .env.example .env
-```
-
-### Update the environment file
-In the .env file, replace `<YOUR-ACCESS-TOKEN>` with the Prepr access token from your environment with demo content.
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on `http://localhost:3000`
 
 ```bash
 npm run dev

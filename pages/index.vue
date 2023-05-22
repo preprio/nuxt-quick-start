@@ -1,59 +1,28 @@
+<!-- ./app.vue -->
 <template>
+  <div>
+    <h1>My blog site</h1>
+    <ul>
 
-  <!--Loop through elements in the queried stack and get the relevant components for the project -->
-    <component
-      v-for="element in stack"
-      :key="element._id"
-      :is="getComponent(element.__typename)"
-      :data="element"
-    ></component>
-  
-  </template>
-  
-  <script setup>
-    import { computed } from "vue";
-    import { reactive } from "vue";
-    import PageHeader from "@/components/PageHeader";
-    import ImageAndText from "@/components/ImageAndText";
-  
-    // Import the query
-    import { GetPageBySlug } from "@/queries/getPageBySlug";
+      <!-- Loop through the articles array -->
+      <li :data="article" v-for="(article, index) in articles" :key="article._id">
+       <!-- Add a link for each slug and include the article slug in the directed path -->
+       <nuxt-link :to="`/${article._slug}`">
+          {{ article.title }}
+        </nuxt-link>
+      </li> 
+    </ul>
+  </div>
+ </template>
+ 
+<script setup>
+  //Import the query
+  import { GetArticles } from "@/queries/getArticles";
 
-    // Import the vue-router to access the URL values
-    import { useRoute } from "vue-router";
-  
-    // Get the utm campaign value from the URL
-    const route = useRoute();
-    const utm_campaign = (route.query.utm_campaign === undefined) ? "None" : route.query.utm_campaign;
+  //Request the data from Prepr
+  const { data } = await useAsyncQuery(GetArticles);
 
-    const components = [
-      { name: "PageHeader", comp: PageHeader },
-      { name: "ImageAndText", comp: ImageAndText },
-    ];
-  
-    // Assign components for the stack loop above
-  
-    const getComponent = (name) => {
-      const component = components.find((component) => component.name === name);
-      return component ? component.comp : null;
-    };
-  
-  // Execute query to retrieve a page by a slug 
+  //Assign the articles variable to all the articles from Prepr 
+  const articles = data.value.Articles.items;
 
-  // Set the segment to the utm_campaign value assigned above
-    const { data } = await useAsyncQuery(
-      GetPageBySlug,
-      {
-        slug: "home",
-        segment: utm_campaign,
-      }
-    );
-  
-  // Assign the retrieved page and stack
-    const page = data.value.Page;
-  
-    const stack = computed(() => {
-      return page.stack;
-    });
-    </script>
-  
+ </script>
