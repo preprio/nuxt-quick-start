@@ -1,6 +1,6 @@
 //queries/articleDetail.js
 
-export const GetArticleDetail = gql`
+export const GetArticleBySlug = gql`
 query ($slug: String) {
    Article (slug: $slug) {
      _id
