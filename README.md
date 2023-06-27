@@ -1,7 +1,7 @@
 # Nuxt Quick Start
-The Nuxt quick start project launches a blog app with content from Prepr.
+The Nuxt quick start project launches a blog app with content from Prepr. 
 
-[Stackblitz demo](https://stackblitz.com/edit/nuxt-quick-start)
+Look at the [Nuxt Quick start guide](https://docs.prepr.io/connecting-front-end-apps/nuxt-quick-start-guide) to learn more, or check out the [Stackblitz demo](https://stackblitz.com/edit/nuxt-quick-start) for zero installation.
 
 ## Setup
 
