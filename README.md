@@ -1,4 +1,4 @@
-# nuxt-quick-start
+# Nuxt Quick Start
 The Nuxt quick start project launches a blog app with content from Prepr.
 
 [Stackblitz demo](https://stackblitz.com/edit/nuxt-quick-start)
