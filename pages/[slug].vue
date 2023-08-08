@@ -13,7 +13,7 @@
         <img
           v-if="contentType.items.length"
           :src="contentType.items[0]?.url"
-          width="300" 
+          width="300"
           height="250"
         />
       </div>
@@ -25,15 +25,15 @@
       ></div>
     </div>
 </template>
-   
+
   <script setup>
     import { useRoute } from "vue-router";
-    import {GetArticleBySlug} from "../queries/getArticleBySlug";
+    import {GetArticleBySlug} from "../queries/get-article-by-slug";
 
     // Use vue-router to determine the slug in the URL
     const route = useRoute();
     const slug = route.params.slug;
-    
+
     // Request an article by the slug
     const articleQuery = await useAsyncQuery(GetArticleBySlug, {
         "slug": slug

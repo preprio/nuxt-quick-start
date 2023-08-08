@@ -10,19 +10,19 @@
        <nuxt-link :to="`/${article._slug}`">
           {{ article.title }}
         </nuxt-link>
-      </li> 
+      </li>
     </ul>
   </div>
  </template>
- 
+
 <script setup>
   //Import the query
-  import { GetArticles } from "@/queries/getArticles";
+  import { GetArticles } from "~/queries/get-articles";
 
   //Request the data from Prepr
   const { data } = await useAsyncQuery(GetArticles);
 
-  //Assign the articles variable to all the articles from Prepr 
+  //Assign the articles variable to all the articles from Prepr
   const articles = data.value.Articles.items;
 
  </script>
