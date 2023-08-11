@@ -28,7 +28,7 @@
 
   <script setup>
     import { useRoute } from "vue-router";
-    import {GetArticleBySlug} from "../queries/get-article-by-slug";
+    import {GetArticleBySlug} from "~/queries/get-article-by-slug";
 
     // Use vue-router to determine the slug in the URL
     const route = useRoute();
