@@ -1,5 +1,3 @@
-//queries/get-article-by-slug.js
-
 export const GetArticleBySlug = gql`
 query ($slug: String) {
    Article (slug: $slug) {
