@@ -9,4 +9,8 @@ export default defineNuxtConfig({
         prepr: './apollo/prepr.ts',
     },
   },
+  //Needed for Vercel
+  build: {
+    transpile: ["tslib"],
+  },
 })
