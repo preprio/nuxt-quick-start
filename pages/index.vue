@@ -5,10 +5,10 @@
     <ul>
 
       <!-- Loop through the articles array -->
-      <li :data="article" v-for="(article, index) in articles" :key="article._id">
+      <li :data="post" v-for="(post, index) in posts" :key="post._id">
        <!-- Add a link for each slug and include the article slug in the directed path -->
-       <nuxt-link :to="`/${article._slug}`">
-          {{ article.title }}
+       <nuxt-link :to="`/${post._slug}`">
+          {{ post.title }}
         </nuxt-link>
       </li>
     </ul>
@@ -17,12 +17,12 @@
 
 <script setup>
   //Import the query
-  import { GetArticles } from "~/queries/get-articles";
+  import { GetPosts } from "~/queries/get-posts";
 
   //Request the data from Prepr
-  const { data } = await useAsyncQuery(GetArticles);
+  const { data } = await useAsyncQuery(GetPosts);
 
   //Assign the articles variable to all the articles from Prepr
-  const articles = data.value.Articles.items;
+  const posts = data.value.Posts.items;
 
  </script>

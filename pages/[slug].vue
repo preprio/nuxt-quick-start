@@ -3,10 +3,10 @@
 <template>
     <!-- Display title -->
     <h1 >
-        {{ article.title }}
+        {{ post.title }}
     </h1>
     <!-- Loop through the article content -->
-    <div :key="contentType._id" v-for="contentType in article.content">
+    <div :key="contentType._id" v-for="contentType in post.content">
 
     <!-- Display images if they exist -->
       <div v-if="contentType.__typename === 'Assets'">
@@ -28,18 +28,18 @@
 
   <script setup>
     import { useRoute } from "vue-router";
-    import {GetArticleBySlug} from "~/queries/get-article-by-slug";
+    import {GetPostBySlug} from "~/queries/get-post-by-slug";
 
     // Use vue-router to determine the slug in the URL
     const route = useRoute();
     const slug = route.params.slug;
 
     // Request an article by the slug
-    const articleQuery = await useAsyncQuery(GetArticleBySlug, {
+    const postQuery = await useAsyncQuery(GetPostBySlug, {
         "slug": slug
     });
 
     // Assign the article variable to the article content from Prepr
-    const article = articleQuery.data.value.Article;
+    const post = postQuery.data.value.Post;
 
    </script>
