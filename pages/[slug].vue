@@ -5,6 +5,11 @@
     <h1 >
         {{ post.title }}
     </h1>
+
+    <div class="my-10">
+        <img :src="post.cover.url" />
+    </div>
+
     <!-- Loop through the article content -->
     <div :key="contentType._id" v-for="contentType in post.content">
 
@@ -13,8 +18,6 @@
         <img
           v-if="contentType.items.length"
           :src="contentType.items[0]?.url"
-          width="300"
-          height="250"
         />
       </div>
 
