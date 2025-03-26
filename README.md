@@ -53,4 +53,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ## The end result
 
-![blog site end result](https://assets-site.prepr.io//5oz8w28ybxje-screenshot-2023-05-10-at-111353.png)
+![Nuxt QSG end result](https://assets-site.prepr.io/2x5l444ndgzb//nuxt-blog-post-list.png)
