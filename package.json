@@ -11,6 +11,6 @@
   "devDependencies": {
     "@nuxtjs/apollo": "^5.0.0-alpha.16",
     "@types/node": "^18.19.130",
-    "nuxt": "^3.21.2"
+    "nuxt": "^4.4.2"
   }
 }
