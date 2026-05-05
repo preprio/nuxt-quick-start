@@ -35,7 +35,7 @@
 
     // Use vue-router to determine the slug in the URL
     const route = useRoute();
-    const slug = route.params.slug;
+    const slug = `blog/${route.params.slug}`;
 
     // Request an article by the slug
     const postQuery = await useAsyncQuery(GetPostBySlug, {
