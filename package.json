@@ -11,6 +11,13 @@
   "devDependencies": {
     "@nuxtjs/apollo": "^5.0.0-alpha.16",
     "@types/node": "^18.19.130",
-    "nuxt": "^3.21.2"
+    "nuxt": "^3.21.7"
+  },
+  "overrides": {
+    "nitropack": ">=2.13.4",
+    "vite": "^7.3.5",
+    "esbuild": "^0.28.1",
+    "shell-quote": "^1.8.4",
+    "launch-editor": "^2.14.1"
   }
 }
