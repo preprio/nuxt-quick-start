@@ -17,7 +17,7 @@
     "nitropack": ">=2.13.4",
     "vite": "^7.3.5",
     "esbuild": ">=0.28.1",
-    "shell-quote": ">=1.8.4",
+    "shell-quote": "1.10.0",
     "launch-editor": "^2.14.1",
     "ws": "^8.21.0",
     "js-yaml": ">=4.2.0",
@@ -29,6 +29,8 @@
     "esbuild@>=0.27.3 <0.28.1": ">=0.28.1",
     "postcss": ">=8.5.10",
     "postcss@<8.5.10": ">=8.5.10",
-    "brace-expansion": "5.0.7"
+    "brace-expansion": "5.0.7",
+    "svgo": "4.0.2",
+    "tar": "7.5.21"
   }
 }
